@@ -20,6 +20,12 @@ namespace Kata20170731_MultiplesOfThreeAndFive
             AssertMultiple3And5ShouldBe(6, 8);
         }
 
+        [TestMethod]
+        public void input_10_should_return_23()
+        {
+            AssertMultiple3And5ShouldBe(10, 23);
+        }
+
         private static void AssertMultiple3And5ShouldBe(int value, int expected)
         {
             var kata = new Kata();
