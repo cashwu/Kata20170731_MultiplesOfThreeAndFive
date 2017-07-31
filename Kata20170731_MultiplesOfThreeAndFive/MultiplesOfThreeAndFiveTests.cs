@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -38,18 +38,7 @@ namespace Kata20170731_MultiplesOfThreeAndFive
     {
         public int Solution(int value)
         {
-            return Multiple(value).Sum();
-        }
-
-        private static IEnumerable<int> Multiple(int value)
-        {
-            for (int i = 1; i < value; i++)
-            {
-                if (i % 3 == 0 || i % 5 == 0)
-                {
-                    yield return i;
-                }
-            }
+            return Enumerable.Range(1, value - 1).Where(v => v % 3 == 0 || v % 5 == 0).Sum();
         }
     }
 }
