@@ -9,14 +9,14 @@ namespace Kata20170731_MultiplesOfThreeAndFive
         [TestMethod]
         public void input_4_should_return_3()
         {
-            AssertMultiple3And5ShouldBe();
+            AssertMultiple3And5ShouldBe(4, 3);
         }
 
-        private static void AssertMultiple3And5ShouldBe()
+        private static void AssertMultiple3And5ShouldBe(int value, int expected)
         {
             var kata = new Kata();
-            var actual = kata.Solution(4);
-            Assert.AreEqual(3, actual);
+            var actual = kata.Solution(value);
+            Assert.AreEqual(expected, actual);
         }
     }
 
