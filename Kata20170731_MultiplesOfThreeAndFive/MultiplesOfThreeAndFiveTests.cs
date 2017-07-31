@@ -32,16 +32,18 @@ namespace Kata20170731_MultiplesOfThreeAndFive
     {
         public int Solution(int value)
         {
-            var result = new List<int>();
+            return Multiple(value).Sum();
+        }
+
+        private static IEnumerable<int> Multiple(int value)
+        {
             for (int i = 1; i < value; i++)
             {
                 if (i % 3 == 0 || i % 5 == 0)
                 {
-                    result.Add(i);
+                    yield return i;
                 }
             }
-
-            return result.Sum();
         }
     }
 }
